@@ -49,8 +49,26 @@ public class Interfaz extends javax.swing.JFrame {
 
         jLabel1.setText("COBRO POR AVISO");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 170, 30));
+
+        txtnumpalabras.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnumpalabrasKeyTyped(evt);
+            }
+        });
         getContentPane().add(txtnumpalabras, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 60, -1));
+
+        txtnumcm.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnumcmKeyTyped(evt);
+            }
+        });
         getContentPane().add(txtnumcm, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 60, -1));
+
+        txtnumcolores.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnumcoloresKeyTyped(evt);
+            }
+        });
         getContentPane().add(txtnumcolores, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 60, -1));
 
         txtcostopalabras.setEditable(false);
@@ -155,6 +173,36 @@ public class Interfaz extends javax.swing.JFrame {
      
      txtnumpalabras.requestFocusInWindow();
     }//GEN-LAST:event_cmdborrarActionPerformed
+
+    private void txtnumpalabrasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnumpalabrasKeyTyped
+    char c=evt.getKeyChar(); 
+          if(!Character.isDigit(c)) { 
+              getToolkit().beep(); 
+              
+              evt.consume(); 
+                      
+          } 
+    }//GEN-LAST:event_txtnumpalabrasKeyTyped
+
+    private void txtnumcmKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnumcmKeyTyped
+     char c=evt.getKeyChar(); 
+          if(!Character.isDigit(c)) { 
+              getToolkit().beep(); 
+              
+              evt.consume(); 
+                      
+          } 
+    }//GEN-LAST:event_txtnumcmKeyTyped
+
+    private void txtnumcoloresKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnumcoloresKeyTyped
+      char c=evt.getKeyChar(); 
+          if(!Character.isDigit(c)) { 
+              getToolkit().beep(); 
+              
+              evt.consume(); 
+                      
+          } 
+    }//GEN-LAST:event_txtnumcoloresKeyTyped
 
     /**
      * @param args the command line arguments
